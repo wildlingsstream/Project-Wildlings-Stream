@@ -44,6 +44,55 @@
         .button:hover{
             background:#8ce6ff;
         }
+        @keyframes flicker{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
+}
+
+body{
+    background: linear-gradient(#081018,#10222d,#163b2d);
+    overflow-x:hidden;
+}
+
+.campfire{
+font-size:70px;
+animation:flicker 1.5s infinite;
+margin:25px 0;
+}
+
+.firefly{
+position:fixed;
+color:#ffe96b;
+font-size:18px;
+animation:float 3s ease-in-out infinite;
+pointer-events:none;
+}
+
+.f1{top:15%;left:12%;}
+.f2{top:28%;right:18%;animation-delay:1s;}
+.f3{top:60%;left:8%;animation-delay:2s;}
+.f4{top:78%;right:12%;animation-delay:.5s;}
+
+.trails{
+margin-top:30px;
+}
+
+.sign{
+background:#5f3d21;
+color:white;
+padding:12px;
+margin:10px auto;
+max-width:320px;
+border-radius:10px;
+box-shadow:0 0 12px rgba(0,0,0,.45);
+font-weight:bold;
+}
     </style>
 </head>
 
